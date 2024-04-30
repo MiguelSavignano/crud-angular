@@ -1,0 +1,21 @@
+<p>trabajadores works!</p>
+
+<button (click)="onClickChangeTable()" >Cambiar tabla</button>
+
+<table>
+  <tr *ngIf="!clickEnabled" class="header disabled">
+    <th>Name</th>
+    <th>Price</th>
+  </tr>
+  <tr *ngIf="clickEnabled" class="header enabled">
+    <th >Name</th>
+    <th>Price</th>
+  </tr>
+  <tr *ngFor="let item of items">
+    <td>{{item.name}}</td>
+    <td *ngIf="!clickEnabled">{{item.price}}</td>
+    <td *ngIf="!clickEnabled">{{item.a}}</td>
+    <td *ngIf="clickEnabled">{{item.b}}</td>
+    <td *ngIf="clickEnabled">{{item.c}}</td>
+  </tr>
+</table>

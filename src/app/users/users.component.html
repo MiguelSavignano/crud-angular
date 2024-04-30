@@ -6,6 +6,8 @@
   <button (click)="agregarItem('melon')" >Agregar fruta</button>
   <button (click)="quitarItem()" >Quitar fruta</button>
 
+  <h1 *ngIf="title == 'app-example'" >Hola {{title}}</h1>
+
   <ul>
     <li *ngFor="let usuario of usuarios">
       {{usuario.nombre}}
