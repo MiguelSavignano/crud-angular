@@ -11,6 +11,7 @@ import { RouterOutlet } from '@angular/router';
 })
 export class TrabajadoresComponent {
   clickEnabled = false;
+  headers = ['Name', 'price', 'a']
   items = [
     { name: 'manzana', price: 12, a: "A", b: "B", c: "C"},
     { name: 'pera', price: 10, a: "A", b: "B", c: "C"},
@@ -19,5 +20,10 @@ export class TrabajadoresComponent {
 
   onClickChangeTable() {
     this.clickEnabled = !this.clickEnabled;
+    if(this.clickEnabled) {
+      this.headers = ['Name', 'b', 'c']
+    } else {
+      this.headers = ['Name', 'price', 'a']
+    }
   }
 }

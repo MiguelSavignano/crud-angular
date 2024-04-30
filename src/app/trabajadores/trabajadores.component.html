@@ -4,12 +4,10 @@
 
 <table>
   <tr *ngIf="!clickEnabled" class="header disabled">
-    <th>Name</th>
-    <th>Price</th>
+    <th *ngFor="let header of headers"> {{header}}</th>
   </tr>
   <tr *ngIf="clickEnabled" class="header enabled">
-    <th >Name</th>
-    <th>Price</th>
+    <th *ngFor="let header of headers"> {{header}}</th>
   </tr>
   <tr *ngFor="let item of items">
     <td>{{item.name}}</td>
