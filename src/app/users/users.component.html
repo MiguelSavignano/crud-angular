@@ -1,0 +1,20 @@
+<main class="main">
+  <h1>Hello, {{ title }}</h1>
+  <input type="text" [formControl]="nuevoUsuarioNombre" />
+  <button (click)="guardarUsuario()" >Guardar usuario</button>
+  <br/>
+  <button (click)="agregarItem('melon')" >Agregar fruta</button>
+  <button (click)="quitarItem()" >Quitar fruta</button>
+
+  <ul>
+    <li *ngFor="let usuario of usuarios">
+      {{usuario.nombre}}
+    </li>
+  </ul>
+
+  <ul>
+    <li *ngFor="let item of items">
+      {{item}}
+    </li>
+  </ul>
+</main>

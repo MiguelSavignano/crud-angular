@@ -1,22 +1,7 @@
-<main class="main">
-  <h1>Hello, {{ title }}</h1>
-  <input type="text" [formControl]="nuevoUsuarioNombre" />
-  <button (click)="guardarUsuario()" >Guardar usuario</button>
-  <br/>
-  <button (click)="agregarItem('melon')" >Agregar fruta</button>
-  <button (click)="quitarItem()" >Quitar fruta</button>
-
+<h1>Angular Router App</h1>
+<nav>
   <ul>
-    <li *ngFor="let usuario of usuarios">
-      {{usuario.nombre}}
-    </li>
+    <li><a routerLink="/users" routerLinkActive="active" ariaCurrentWhenActive="page">UsersComponent</a></li>
   </ul>
-
-  <ul>
-    <li *ngFor="let item of items">
-      {{item}}
-    </li>
-  </ul>
-</main>
-
+</nav>
 <router-outlet />
