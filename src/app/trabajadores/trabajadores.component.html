@@ -1,19 +1,28 @@
 <p>trabajadores works!</p>
 
-<button (click)="onClickChangeTable()" >Cambiar tabla</button>
-
-<table>
-  <tr *ngIf="!clickEnabled" class="header disabled">
-    <th *ngFor="let header of headers"> {{header}}</th>
-  </tr>
-  <tr *ngIf="clickEnabled" class="header enabled">
-    <th *ngFor="let header of headers"> {{header}}</th>
-  </tr>
-  <tr *ngFor="let item of items">
-    <td>{{item.name}}</td>
-    <td *ngIf="!clickEnabled">{{item.price}}</td>
-    <td *ngIf="!clickEnabled">{{item.a}}</td>
-    <td *ngIf="clickEnabled">{{item.b}}</td>
-    <td *ngIf="clickEnabled">{{item.c}}</td>
-  </tr>
-</table>
+<div class="trabajadores-table">
+  <div class="title-container">
+    <h2>Trabajadores</h2>
+    <button class="button" (click)="onClickChangeTable()">Cambiar tabla</button>
+  </div>
+  <table class>
+    <tr
+      class="header"
+      [class.disabled]="clickEnabled"
+      [class.enabled]="!clickEnabled"
+    >
+      <th>Name</th>
+      <th *ngIf="!clickEnabled">Price</th>
+      <th *ngIf="!clickEnabled">A</th>
+      <th *ngIf="clickEnabled">B</th>
+      <th *ngIf="clickEnabled">C</th>
+    </tr>
+    <tr *ngFor="let item of items">
+      <td>{{ item.name }}</td>
+      <td *ngIf="!clickEnabled">{{ item.price }}</td>
+      <td *ngIf="!clickEnabled">{{ item.a }}</td>
+      <td *ngIf="clickEnabled">{{ item.b }}</td>
+      <td *ngIf="clickEnabled">{{ item.c }}</td>
+    </tr>
+  </table>
+</div>

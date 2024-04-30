@@ -1,8 +1,64 @@
-.enabled {
-  color: red;
-  font-size: x-large;
+.button {
+  padding: 10px 20px;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #007bff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  &:active {
+    background-color: #004085;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+  }
 }
 
-.disabled {
-  color: black;
+.trabajadores-table {
+  .enabled {
+    color: red;
+    font-size: x-large;
+  }
+
+  .disabled {
+    color: black;
+  }
+
+  padding: 5%;
+  .title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+  }
+
+  th {
+    font-weight: bold;
+    padding: 1%;
+    border: 1px solid #ddd;
+  }
+
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  tr {
+    &:hover {
+      background-color: #f5f5f5;
+    }
+    &:nth-child(odd) {
+      background-color: #f9f9f9;
+    }
+  }
 }
